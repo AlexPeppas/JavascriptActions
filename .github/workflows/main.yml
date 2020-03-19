@@ -1,0 +1,19 @@
+
+
+on:
+  push:
+ 
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: a basic ation to say Hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: actions/JavascriptAction@v1
+        with:
+          who-to-greet: 'Mona Lissa' 
+        #use the output from the 'hello step'
+      - name: Get the output time
+        run: echo "The time was ${{steps.hello.outputs.time}}"
