@@ -1,0 +1,14 @@
+name: 'Testing New Action'
+description: 'this is the first test to check the JS actions with git'
+inputs:
+    who-to-greet: #name of input
+      description: 'Who to greet'
+      required: true
+      default: 'World'
+outputs:
+    time: #name of output
+      description: 'The time we greeted you'
+      default: 500 
+runs:
+  using: 'node12'
+  main: 'index.js'
